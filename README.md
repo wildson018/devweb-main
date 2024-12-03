@@ -1,5 +1,4 @@
 
-
-Arquivo principal do Sistema.
+módulo de cadastro do Sistema.
 
 >>>
