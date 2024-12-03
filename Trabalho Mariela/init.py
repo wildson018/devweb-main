@@ -8,22 +8,26 @@ def login():
     return render_template("login.html")
 
 @app_Wildson.route("/cadastro", methods=["GET", "POST"])
+
+
+@app_Wildson.route("/register", methods=["GET", "POST"])
 def cadastro():
     if request.method == "POST":
-        name = request.form["name"]
-        cpf = request.form["cpf"]
-        email = request.form["email"]
-        phone = request.form["phone"]
-        address = request.form["address"]
-        password = request.form["password"]
-        confirm_password = request.form["confirm_password"]
+        name = request.form.get("name")
+        cpf = request.form.get("cpf")
+        email = request.form.get("email")
+        phone = request.form.get("phone")
+        address = request.form.get("address")
+        password = request.form.get("password")
+        confirm_password = request.form.get("confirm_password")
 
+       
         if password != confirm_password:
             flash("As senhas não coincidem. Tente novamente!", "error")
-            return redirect(url_for("cadastro"))
-        
+            return redirect(url_for("register"))
+
+       
         flash("Cadastro realizado com sucesso!", "success")
-        return redirect(url_for("login"))
 
     return render_template("cadastro.html")
 
