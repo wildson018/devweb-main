@@ -1,5 +1,5 @@
 
 
-Arquivo principal do Sistema.
+módulo de login  do Sistema.
 
 >>>
