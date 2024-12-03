@@ -1,5 +1,5 @@
 
 
-Arquivo principal da aplicação Colibri.
+Arquivo principal do Sistema.
 
 >>>
