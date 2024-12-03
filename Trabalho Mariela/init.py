@@ -6,6 +6,9 @@ app_Wildson.secret_key = "secretkey"
 usuarios = {
     'usuario@example.com': {'senha': 'senha123'},  
 }
+@app_Wildson.route("/contato")
+def contato():
+    return render_template("contato.html")
 
 @app_Wildson.route("/login", methods=["GET", "POST"])
 def login():
